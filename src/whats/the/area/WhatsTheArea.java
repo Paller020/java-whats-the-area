@@ -24,10 +24,11 @@ public class WhatsTheArea {
     surfaceArea += triangle();
     surfaceArea += triangle();
     surfaceArea += square();
-    surfaceArea += circles();
-    surfaceArea += circles();
-    surfaceArea += circles();
+    surfaceArea -= square();
     surfaceArea += circle();
+    surfaceArea += circle();
+    surfaceArea += circle();
+    surfaceArea += parallelogram();
     //TODO: add calls to other methods for cach of the shapes needed
     System.out.println("\nThe total area of Michael's truck is : " + surfaceArea);
     } 
@@ -45,7 +46,7 @@ public class WhatsTheArea {
     
     
     public static int square(){
-    System.out.println("\n The area of a square is : base * height");
+    System.out.println("\nThe area of a square is : base * height");
     System.out.print("base = ");
     int base2 = in.nextInt();
     System.out.print("height = ");
@@ -56,17 +57,55 @@ public class WhatsTheArea {
     }
     
     public static int circle(){
-    System.out.println("\n The area of a circle is : Pi * r^2");
-    System.out.println("radius = ");
+    System.out.println("\nThe area of a circle is: Pi * r^2");
+    System.out.print("radius = ");
     int radius = in.nextInt();
-    System.out.println("Pi = ");
-    int Pi = in.nextInt(); 
-    
-            
-            
-        
-        
+    System.out.print("Pi = ");
+    double Pi = in.nextDouble();
+    double area3 = (Pi * (radius * radius));
+    System.out.print("The area of this shape is " + area3 );
+    return (int) area3;
     }
+    
+    public static int parallelogram(){
+    System.out.println("\nThe area of a parallelogram is: base * height");
+    System.out.print("base = ");
+    int base4 = in.nextInt();
+    System.out.print("height = ");
+    int height4 = in.nextInt();
+    int area4 = (base4 * height4);
+    System.out.print("The area of this shape is: " + area4);
+    return area4;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+    
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
     
         
         
